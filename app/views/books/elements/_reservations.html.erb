@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>status</th>
+      <th>created</th>
+      <th>expires</th>
+      <th>user</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% reservations.order(created_at: :desc).each do |reservation| %>
+      <tr>
+        <td class='book-status book-status--<%= reservation.status.underscore %>'><%= reservation.status %></td>
+        <td><%= reservation.created_at.to_date %></td>
+        <td><%= reservation.expires_in %></td>
+        <td><%= reservation.user.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

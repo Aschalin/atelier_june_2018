@@ -1,0 +1,12 @@
+<main class="main-content">
+  <h2>"<%= @book.title %>"</h2>
+  <p class="isbn-nr">isbn: <strong><%= @book.isbn %></strong></p>
+  <% unless @book.reservations.empty? %>
+    <%= render partial: 'books/elements/reservations', locals: {reservations: @book.reservations} %>
+  <% end %>
+  <%= render partial: 'books/elements/action', locals: {book: @book} %>
+  <%= link_to books_path, class: 'back-link' do %>
+    <i class="fa fa-angle-double-left"></i>
+    return to books
+  <% end %>
+</main>
