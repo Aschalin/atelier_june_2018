@@ -1,4 +1,4 @@
-<% if book.can_take?(current_user) %>
+<% if book.can_be_taken?(current_user) %>
   <%= link_to('Take', take_book_path(book_id: book.id), class: 'btn') %>
 <% elsif book.can_give_back?(current_user) %>
   <%= link_to('Give back', give_back_book_path(book_id: book.id), class: 'btn') %>
