@@ -13,9 +13,7 @@ Kilka słów o startowej apce:
 
 # Getting Started
 
-* Rails 5.1.2
 * Ruby 2.5.0
-* SQLite
 
 # Instalacja, pierwsze odpalenie
 
