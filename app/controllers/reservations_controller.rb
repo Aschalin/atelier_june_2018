@@ -28,8 +28,7 @@ class ReservationsController < ApplicationController
   end
 
   def reservation_handler
-    @handler ||= ::ReservationsHandler.new(current_user)
-
+    @reservation_handler ||= ::ReservationsHandler.new(current_user)
   end
 
   def load_user
