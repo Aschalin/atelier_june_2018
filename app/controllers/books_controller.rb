@@ -2,6 +2,7 @@ class BooksController < ApplicationController
   before_action :load_books, only: :index
   before_action :load_book, only: :show
   before_action :new_book, only: :create
+  before_action :reservations_handler, only: :show
 
   def index
   end
@@ -24,6 +25,10 @@ class BooksController < ApplicationController
   end
 
   def destroy
+  end
+
+  def reservations_handler
+    @reservations_handler ||= ReservationsHandler.new(current_user, load_book)
   end
 
   private
