@@ -12,4 +12,10 @@ class Book < ApplicationRecord
   def category_name=(name)
     self.category = Category.where(name: name).first_or_initialize
   end
+
+  private
+
+  def notify_user_caledar(reservation)
+    UserCapendarNotifier.new(reservation.user).perform(reservation)
+  end
 end

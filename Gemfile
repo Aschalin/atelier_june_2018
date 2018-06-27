@@ -7,6 +7,9 @@ end
 
 gem 'devise'
 
+gem 'google-api-client', '0.8.2', require: 'google/api_client'
+gem 'a9n'
+gem 'omniauth-google-oauth2'
 gem 'rails', '~> 5.1.2'
 gem 'pg'
 gem 'sqlite3'

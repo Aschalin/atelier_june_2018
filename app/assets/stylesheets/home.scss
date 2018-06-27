@@ -98,6 +98,18 @@ a:not(.btn) {
   }
 }
 
+.serach-form {
+  align-items:center;
+  display: flex;
+  .btn {
+    margin: 0;
+    whitespace: nowrap;
+  }
+  input {
+    margin-right: 20px;
+  }
+}
+
 .user-data__nav {
   display: flex;
   list-style: none;
